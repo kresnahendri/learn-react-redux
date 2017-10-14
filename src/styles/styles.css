@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar-default .navbar-nav>li>a.active:focus,
+.navbar-default .navbar-nav>li>a.active:hover,
+.navbar-default .navbar-nav>li>a.active:active,
+.navbar-default .navbar-nav>li>a.active:visited,
+.navbar-default .navbar-nav>li>a.active {
+  background: #ccc;
+}
