@@ -34,8 +34,8 @@ class CoursesPage extends Component {
 
         <input
           type="text"
-          onChange={this.onTitleChange}
-          value={this.state.course.title} />
+          value={this.state.course.title}
+          onChange={this.onTitleChange} />
 
         <input
           type="submit"
