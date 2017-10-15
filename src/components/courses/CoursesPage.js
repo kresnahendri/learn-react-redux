@@ -3,13 +3,15 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as courseActions from '../../actions/courseActions'
 
+import CourseList from './CourseList'
+
 class CoursesPage extends Component {
   constructor(props, context) {
     super(props, context)
 
     this.state = {
       course: {
-        title: null
+        title: ''
       }
     }
 
@@ -34,12 +36,13 @@ class CoursesPage extends Component {
   }
 
   render() {
+    const { courses } = this.props
     return (
       <div>
         <h1>Courses</h1>
-        {this.props.courses.map(this.courseRow)}
-        <h2>Add Courses</h2>
+        <CourseList courses={courses} />
 
+        <h2>Add Courses</h2>
         <input
           type="text"
           value={this.state.course.title}
