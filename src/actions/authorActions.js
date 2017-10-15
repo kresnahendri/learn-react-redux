@@ -4,14 +4,14 @@ import {
 
 import authorApi from '../api/mockAuthorApi'
 
-export function getAllAuthorsSuccess(authors) {
+export function loadAuthorsSuccess(authors) {
   return {
     type: LOAD_AUTHORS_SUCCESS,
     authors
   }
 }
 
-export function getAllAuthors() {
+export function loadAuthors() {
   return dispatch => {
     return authorApi.getAllAuthors().then(authors => {
       dispatch(getAllAuthorsSuccess)
