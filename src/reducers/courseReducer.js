@@ -1,4 +1,7 @@
-import { CREATE_COURSE } from './../actions/actionTypes'
+import {
+  CREATE_COURSE,
+  LOAD_COURSES_SUCCESS
+} from './../actions/actionTypes'
 
 export default function courseReducer(state = [], action) {
   switch (action.type) {
@@ -7,6 +10,8 @@ export default function courseReducer(state = [], action) {
         ...state,
         Object.assign({}, action.course)
       ]
+    case LOAD_COURSES_SUCCESS:
+      return action.courses
     default:
       return state
   }
